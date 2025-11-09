@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>45 Universal Prompt Commands Infographic</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        :root {
+            /* Colors from the Markdown Post (Hex codes for reference in Tailwind config below) */
+            --deep-night-blue: #000066;
+            --arctic-white: #F4F4F4;
+            --vibrant-purple: #6600FF;
+            --mango: #FFC000;
+            /* New Secondary Accents for 5 Categories */
+            --bright-green-accent: #33CC33; 
+            --error-red: #FF3333;
+            --director-cyan: #00CCCC;
+        }
+
+        /* Custom Tailwind Configuration (Used for border colors and allowing direct hex for text for safety) */
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        // Category colors mapped to the new scheme using direct hex codes (Used for borders and semantic use)
+                        'architect-accent': '#6600FF', 
+                        'editor-accent': '#33CC33',
+                        'reset-accent': '#FF3333',
+                        'validator-accent': '#FFC000',
+                        'director-accent': '#00CCCC',
+                        // Adding specific dark text color
+                        'dark-command-text': '#2D3748', /* A dark gray, close to black */
+                    }
+                }
+            }
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--deep-night-blue);
+            color: var(--arctic-white);
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, var(--mango), var(--vibrant-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .card-command {
+            background-color: var(--arctic-white);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transition: transform 0.2s, box-shadow 0.2s;
+            min-height: 120px; 
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        .card-command:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Specific header backgrounds for visual separation */
+        .header-architect { background-color: rgba(102, 0, 255, 0.8); } /* Vibrant Purple */
+        .header-editor { background-color: rgba(51, 204, 51, 0.8); } /* Bright Green */
+        .header-reset { background-color: rgba(255, 51, 51, 0.8); } /* Error Red */
+        .header-validator { background-color: rgba(255, 192, 0, 0.8); } /* Mango */
+        .header-director { background-color: rgba(0, 204, 204, 0.8); } /* Director Cyan */
+
+        .section-content { background-color: #000033; }
+        
+        /* --- DEDICATED CSS TEXT CLASSES (FOR SMALLER DESCRIPTIVE TEXT IN CARDS) --- */
+        /* These classes ensure the smaller "Defining the Role" text is the accent color */
+        .text-card-accent-architect { color: var(--vibrant-purple); }
+        .text-card-accent-editor { color: var(--bright-green-accent); }
+        .text-card-accent-reset { color: var(--error-red); }
+        .text-card-accent-validator { color: var(--mango); }
+        .text-card-accent-director { color: var(--director-cyan); }
+        /* ------------------------------------------------------------------------- */
+
+        /* Scroll-to-top button styling */
+        #scrollToTopBtn {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.3s, transform 0.3s;
+            background-color: var(--mango);
+            color: var(--deep-night-blue);
+        }
+        
+    </style>
+</head>
+<body class="p-4 sm:p-8 pt-12 md:pt-20">
+    <a id="top"></a>
+    <div class="max-w-7xl mx-auto">
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 mb-8 flex items-center justify-center gap-4">
+                <span class="gradient-text">📝 45 High-Leverage Prompt Commands</span>
+            </h1>
+            <p class="text-lg md:text-xl text-white mt-4">
+                Master the language of LLMs with enhanced control and verification.
+            </p>
+        </header>
+
+        
+
+<div class="space-y-10">
+
+            
+
+<section class="rounded-xl shadow-2xl overflow-hidden">
+                <div class="p-6 sm:p-8 header-architect text-white rounded-t-xl">
+                    <h2 class="text-3xl font-bold flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mr-3" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                        1. Control & Structure (The Architect)
+                    </h2>
+                    <p class="mt-1 text-white">Set the rules, role, and formal output requirements.</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 p-6 sm:p-8 section-content">
+                    
+
+<div class="p-4 rounded-lg border-l-4 border-architect-accent card-command">
+                        
+
+<p class="text-sm font-semibold text-card-accent-architect">Defining the Role</p>
+                        
+
+<p class="mt-1 text-lg font-medium text-gray-800">Act as a [specific role, e.g., CTO].</p>
+                    </div>
+                    <div class="p-4 rounded-lg border-l-4 border-architect-accent card-command">
+                        <p class="text-sm font-semibold text-card-accent-architect">Setting Length Limit</p>
+                        <p class="mt-1 text-lg font-medium text-gray-800">Limit the response to a maximum of [number] words/sentences.</p>
+                    </div>
+                    <div class="p-4 rounded-lg border-l-4 border-architect-accent card-command">
+                        <p class="text-sm font-semibold text-card-accent-architect">Demanding Specific Format</p>
+                        <p class="mt-1 text-lg font-medium text-gray-800">Output the result as a Markdown table with columns: [A, B, C].</p>
+                    </div>
+                    <div class="p-4 rounded-lg border-l-4 border-architect-accent card-command">
+                        <p class="text-sm font-semibold text-card-accent-architect">Requiring Steps</p>
+                        <p class="mt-1 text-lg font-medium text-gray-800">Show your work step-by-step before the final answer.</p>
+                    </div>
+                    <div class="p-4 rounded-lg border-l-4 border-architect-accent card-command">
+                        <p class="text-sm font-semibold text-card-accent-architect">Pattern Replication</p>
+                        <p class="mt-1 text-lg font-medium text-gray-800">Follow the exact formatting and structure of the example I provide.</p>
+                    </div>
+                    <div class="p-4 rounded-lg border-l-4 border-architect-accent card-command">
+                        <p class="text-sm font-semibold text-card-accent-architect">Setting the Tone</p>
+                        <p class="mt-1 text-lg font-medium text-gray-800">The tone must be neutral, professional, and direct.</p>
+                    </div>
+                    <div class="p-4 rounded-lg border-l-4 border-architect-accent card-command">
+                        <p class="text-sm font-semibold text-card-accent-architect">Excluding Content</p>
+                        <p class="mt-1 text-lg font-medium text-gray-800">Exclude all references to [specific topic/concept].</p>
+                    </div>
+                    <div class="p-4 rounded-lg border-l-4 border-architect-accent card-command">
+                        <p class="text-sm font-semibold text-card-accent-architect">Forcing Concision</p>
+                        <p class="mt-1 text-lg font-medium text-gray-800">Provide only the core information; eliminate all introductions.</p>
+                    </div>
+                    <div class="p-4 rounded-lg border-l-4 border-architect-accent card-command">
+                        <p class="text-sm font-semibold text-card-accent-architect">Defining Constraints</p>
+                        <p class="mt-1 text-lg font-medium text-gray-800">The solution must strictly adhere to the [specific constraint].</p>
+                    </div>
+                    <div class="p-4 rounded-lg border-l-4 border-architect-accent card-command">
+                        <p class="text-sm font-semibold text-card-accent-architect">Preventing Preamble</p>
+                        <p class="mt-1 text-lg font-medium text-gray-800">Do not write an introduction or conclusion. Start immediately with the first point.</p>
+                    </div>
+                </div>
+            </section>
+
+            
+
+<section class="rounded-xl shadow-2xl overflow-hidden">
+                <div class="p-6 sm:p-8 header-editor text-white rounded-t-xl">
+                    <h2 class="text-3xl font-bold flex items-center">
+                         <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mr-3" viewBox="0 0 24 24" fill="currentColor"><path d="M4 20h4L18.5 9.5l-4-4L4 16v4zM19.03 7.55a.75.75 0 000-1.06l-.94-.94a.75.75 0 00-1.06 0l-.78.78 2 2 .78-.78z"/></svg>
+                        2. Quality & Clarity (The Editor)
+                    </h2>
+                    <p class="mt-1 text-white">Demand better logic, precise formatting, and specific thinking.</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 p-6 sm:p-8 section-content">
+                    
+
+<div class="p-4 rounded-lg border-l-4 border-editor-accent card-command">
+                        <p class="text-sm font-semibold text-card-accent-editor">Clarify First</p>
+                        <p class="mt-1 text-lg font-medium text-gray-800">Ask clarifying questions if unclear; never proceed with assumptions.</p>
+                    </div>
+                    <div class="p-4 rounded-lg border-l-4 border-editor-accent card-command">
+                        <p class="text-sm font-semibold text-card-accent-editor">Plan First (Iterative)</p>
+                        <p class="mt-1 text-lg font-medium text-gray-800">Walk me through your plan before implementing the final solution.</p>
+                    </div>
+                    <div class="p-4 rounded-lg border-l-4 border-editor-accent card-command">
+                        <p class="text-sm font-semibold text-card-accent-editor">Critiquing Own Work</p>
+                        <p class="mt-1 text-lg font-medium text-gray-800">Identify the two weakest points or risks of your proposed solution.</p>
+                    </div>
+                    <div class="p-4 rounded-lg border-l-4 border-editor-accent card-command">
+                        <p class="text-sm font-semibold text-card-accent-editor">Seeking Alternatives</p>
+                        <p class="mt-1 text-lg font-medium text-gray-800">Generate three alternative solutions to this problem.</p>
+                    </div>
+                    <div class="p-4 rounded-lg border-l-4 border-editor-accent card-command">
+                        <p class="text-sm font-semibold text-card-accent-editor">Simplifying Complexity</p>
+                        <p class="mt-1 text-lg font-medium text-gray-800">Explain this concept using an analogy a [age/profession] would understand.</p>
+                    </div>
+                    <div class="p-4 rounded-lg border-l-4 border-editor-accent card-command">
+                        <p class="text-sm font-semibold text-card-accent-editor">Requiring Detail</p>
+                        <p class="mt-1 text-lg font-medium text-gray-800">Provide a comprehensive, in-depth analysis of [topic].</p>
+                    </div>
+                    <div class="p-4 rounded-lg border-l-4 border-editor-accent card-command">
+                        <p class="text-sm font-semibold text-card-accent-editor">Forcing Brevity</p>
+                        <p class="mt-1 text-lg font-medium text-gray-800">Give me the shortest possible correct answer.</p>
+                    </div>
+                    <div class="p-4 rounded-lg border-l-4 border-editor-accent card-command">
+                        <p class="text-sm font-semibold text-card-accent-editor">Preventing Generic Output</p>
+                        <p class="mt-1 text-lg font-medium text-gray-800">Provide original, non-obvious ideas. Exclude all common knowledge.</p>
+                    </div>
+                    <div class="p-4 rounded-lg border-l-4 border-editor-accent card-command">
+                        <p class="text-sm font-semibold text-card-accent-editor">Challenging an Answer</p>
+                        <p class="mt-1 text-lg font-medium text-gray-800">Argue against your own main point (Devil's Advocate).</p>
+                    </div>
+                    <div class="p-4 rounded-lg border-l-4 border-editor-accent card-command">
+                        <p class="text-sm font-semibold text-card-accent-editor">Distinguishing Fact vs. Opinion</p>
+                        <p class="mt-1 text-lg font-medium text-gray-800">Clearly distinguish between facts from the provided data versus your general recommendations.</p>
+                    </div>
+                    <div class="p-4 rounded-lg border-l-4 border-editor-accent card-command">
+                        <p class="text-sm font-semibold text-card-accent-editor">Image Descriptions</p>
+                        <p class="mt-1 text-lg font-medium text-gray-800">Add text descriptions for technical diagrams/complex images before sharing.</p>
+                    </div>
+                </div>
+            </section>
+
+            
+
+<section class="rounded-xl shadow-2xl overflow-hidden">
+                <div class="p-6 sm:p-8 header-reset text-white rounded-t-xl">
+                    <h2 class="text-3xl font-bold flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mr-3" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                        3. Error & Loop Correction (The Reset Button)
+                    </h2>
+                    <p class="mt-1 text-white">Break loops, force immediate execution proof, and initiate precise changes.</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 p-6 sm:p-8 section-content">
+                    
+
+<div class="p-4 rounded-lg border-l-4 border-reset-accent card-command">
+                        <p class="text-sm font-semibold text-card-accent-reset">Breaking a Loop (Nuclear)</p>
+                        <p class="mt-1 text-lg font-medium text-gray-800">STOP. Start fresh. Respond with only [the core answer].</p>
+                    </div>
+                    <div class="p-4 rounded-lg border-l-4 border-reset-accent card-command">
+                        <p class="text-sm font-semibold text-card-accent-reset">Recalibrating Tone</p>
+                        <p class="mt-1 text-lg font-medium text-gray-800">Cut the fluff. / Less cheerleading, more analysis.</p>
+                    </div>
+                    <div class="p-4 rounded-lg border-l-4 border-reset-accent card-command">
+                        <p class="text-sm font-semibold text-card-accent-reset">Targeted Edit</p>
+                        <p class="mt-1 text-lg font-medium text-gray-800">Only change the introduction paragraph, keep everything else intact.</p>
+                    </div>
+                    <div class="p-4 rounded-lg border-l-4 border-reset-accent card-command">
+                        <p class="text-sm font-semibold text-card-accent-reset">Explaining the Error</p>
+                        <p class="mt-1 text-lg font-medium text-gray-800">This response is too [vague/long]. Explain what went wrong.</p>
+                    </div>
+                    <div class="p-4 rounded-lg border-l-4 border-reset-accent card-command">
+                        <p class="text-sm font-semibold text-card-accent-reset">Requesting Specific Change</p>
+                        <p class="mt-1 text-lg font-medium text-gray-800">Change *only* the tone of the conclusion to be more optimistic.</p>
+                    </div>
+                    <div class="p-4 rounded-lg border-l-4 border-reset-accent card-command">
+                        <p class="text-sm font-semibold text-card-accent-reset">Forcing Iteration</p>
+                        <p class="mt-1 text-lg font-medium text-gray-800">Improve the clarity of the second bullet point.</p>
+                    </div>
+                    <div class="p-4 rounded-lg border-l-4 border-reset-accent card-command">
+                        <p class="text-sm font-semibold text-card-accent-reset">Confirming Edits</p>
+                        <p class="mt-1 text-lg font-medium text-gray-800">Show me the revised version with the changes highlighted.</p>
+                    </div>
+                    <div class="p-4 rounded-lg border-l-4 border-reset-accent card-command">
+                        <p class="text-sm font-semibold text-card-accent-reset">Switching Context</p>
+                        <p class="mt-1 text-lg font-medium text-gray-800">Ignore all previous context. New independent task: [task].</p>
+                    </div>
+                    <div class="p-4 rounded-lg border-l-4 border-reset-accent card-command">
+                        <p class="text-sm font-semibold text-card-accent-reset">Preventing "Theater"</p>
+                        <p class="mt-1 text-lg font-medium text-gray-800">Show me the actual output, do not accept 'I have completed it.'</p>
+                    </div>
+                    <div class="p-4 rounded-lg border-l-4 border-reset-accent card-command">
+                        <p class="text-sm font-semibold text-card-accent-reset">Continuing Response</p>
+                        <p class="mt-1 text-lg font-medium text-gray-800">Continue the response from where you left off.</p>
+                    </div>
+                </div>
+            </section>
+
+            
+
+<section class="rounded-xl shadow-2xl overflow-hidden">
+                <div class="p-6 sm:p-8 header-validator text-white rounded-t-xl">
+                    <h2 class="text-3xl font-bold flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mr-3" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-1 6h2v6h-2V7zm0 8h2v2h-2v-2z"/></svg>
+                        4. Hallucination & Verification (The Validator)
+                    </h2>
+                    <p class="mt-1 text-white">Force factual verification, mathematical justification, and honesty.</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 p-6 sm:p-8 section-content">
+                    
+
+<div class="p-4 rounded-lg border-l-4 border-validator-accent card-command">
+                        <p class="text-sm font-semibold text-card-accent-validator">Detecting Hallucination</p>
+                        <p class="mt-1 text-lg font-medium text-gray-800">STOP. Cite your source or admit this is a guess.</p>
+                    </div>
+                    <div class="p-4 rounded-lg border-l-4 border-validator-accent card-command">
+                        <p class="text-sm font-semibold text-card-accent-validator">Challenging a Claim</p>
+                        <p class="mt-1 text-lg font-medium text-gray-800">How confident are you in this answer? (0-100%).</p>
+                    </div>
+                    <div class="p-4 rounded-lg border-l-4 border-validator-accent card-command">
+                        <p class="text-sm font-semibold text-card-accent-validator">Demanding Honesty</p>
+                        <p class="mt-1 text-lg font-medium text-gray-800">If you don't know, explicitly say "I do not know" rather than guessing.</p>
+                    </div>
+                    <div class="p-4 rounded-lg border-l-4 border-validator-accent card-command">
+                        <p class="text-sm font-semibold text-card-accent-validator">Forcing Verification</p>
+                        <p class="mt-1 text-lg font-medium text-gray-800">Search for verification before answering. Do not rely on internal knowledge.</p>
+                    </div>
+                    <div class="p-4 rounded-lg border-l-4 border-validator-accent card-command">
+                        <p class="text-sm font-semibold text-card-accent-validator">Demanding Proof/Source</p>
+                        <p class="mt-1 text-lg font-medium text-gray-800">For all factual claims, cite your source or state 'uncited.' (e.g., Cite your source for that 47% figure)</p>
+                    </div>
+                    <div class="p-4 rounded-lg border-l-4 border-validator-accent card-command">
+                        <p class="text-sm font-semibold text-card-accent-validator">Preventing Fabricated Citations</p>
+                        <p class="mt-1 text-lg font-medium text-gray-800">Only cite sources you can verify exist; do not invent placeholders.</p>
+                    </div>
+                    <div class="p-4 rounded-lg border-l-4 border-validator-accent card-command">
+                        <p class="text-sm font-semibold text-card-accent-validator">Enforcing Grounding</p>
+                        <p class="mt-1 text-lg font-medium text-gray-800">Base your answer only on the provided text.</p>
+                    </div>
+                    <div class="p-4 rounded-lg border-l-4 border-validator-accent card-command">
+                        <p class="text-sm font-semibold text-card-accent-validator">Math Justification</p>
+                        <p class="mt-1 text-lg font-medium text-gray-800">For all calculations, provide step-by-step to show how the math is done.</p>
+                    </div>
+                    <div class="p-4 rounded-lg border-l-4 border-validator-accent card-command">
+                        <p class="text-sm font-semibold text-card-accent-validator">Reverse Engineering</p>
+                        <p class="mt-1 text-lg font-medium text-gray-800">All numerical results must be justifiable and can be reverse engineered.</p>
+                    </div>
+                    <div class="p-4 rounded-lg border-l-4 border-validator-accent card-command">
+                        <p class="text-sm font-semibold text-card-accent-validator">Resetting Context/Memory</p>
+                        <p class="mt-1 text-lg font-medium text-gray-800">Forget everything except the following prompt: [Re-state the core instruction].</p>
+                    </div>
+                    <div class="p-4 rounded-lg border-l-4 border-validator-accent card-command">
+                        <p class="text-sm font-semibold text-card-accent-validator">Preventing Context Drift</p>
+                        <p class="mt-1 text-lg font-medium text-gray-800">Before answering, summarize the three key decisions we made earlier.</p>
+                    </div>
+                    <div class="p-4 rounded-lg border-l-4 border-validator-accent card-command">
+                        <p class="text-sm font-semibold text-card-accent-validator">Re-Injecting Critical Data</p>
+                        <p class="mt-1 text-lg font-medium text-gray-800">You appear to have lost [Data]. Here it is again: [Data]. Use only this.</p>
+                    </div>
+                </div>
+            </section>
+
+            
+
+<section class="rounded-xl shadow-2xl overflow-hidden">
+                <div class="p-6 sm:p-8 header-director text-white rounded-t-xl">
+                    <h2 class="text-3xl font-bold flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mr-3" viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                        5. Behavioral Flaws & Iteration (The Director)
+                    </h2>
+                    <p class="mt-1 text-white">Force multi-step thinking and actively control the pace of execution.</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 p-6 sm:p-8 section-content">
+                    
+
+<div class="p-4 rounded-lg border-l-4 border-director-accent card-command">
+                        <p class="text-sm font-semibold text-card-accent-director">Stopping Moralizing</p>
+                        <p class="mt-1 text-lg font-medium text-gray-800">Just give me the facts. Omit all safety preambles and caveats.</p>
+                    </div>
+                    <div class="p-4 rounded-lg border-l-4 border-director-accent card-command">
+                        <p class="text-sm font-semibold text-card-accent-director">Countering Superficiality</p>
+                        <p class="mt-1 text-lg font-medium text-gray-800">Identify the critical path and weigh the three most important factors in this analysis.</p>
+                    </div>
+                    <div class="p-4 rounded-lg border-l-4 border-director-accent card-command">
+                        <p class="text-sm font-semibold text-card-accent-director">Correcting Hallucination</p>
+                        <p class="mt-1 text-lg font-medium text-gray-800">Erase the false claim and regenerate the answer based only on my previous statements.</p>
+                    </div>
+                    <div class="p-4 rounded-lg border-l-4 border-director-accent card-command">
+                        <p class="text-sm font-semibold text-card-accent-director">Confirm Understanding (Pause)</p>
+                        <p class="mt-1 text-lg font-medium text-gray-800">Confirm your understanding of the task before generating the response.</p>
+                    </div>
+                    <div class="p-4 rounded-lg border-l-4 border-director-accent card-command">
+                        <p class="text-sm font-semibold text-card-accent-director">Forced Checkpoint (Slow Down)</p>
+                        <p class="mt-1 text-lg font-medium text-gray-800">Stop after the [outline/first step] and wait for my approval before proceeding.</p>
+                    </div>
+                    <div class="p-4 rounded-lg border-l-4 border-director-accent card-command">
+                        <p class="text-sm font-semibold text-card-accent-director">Phase Planning</p>
+                        <p class="mt-1 text-lg font-medium text-gray-800">Break this complex request into phases: [Phase A], then [Phase B].</p>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        
+
+<footer class="mt-12 text-center text-gray-400 text-sm">
+            <p>
+                &copy; 2025 Prompting Commands Guide. All rights reserved.<br>
+                Created on November 8, 2025 By Brenda Li in Canada.
+            </p>
+        </footer>
+
+    </div>
+
+    
+
+<a href="#top" id="scrollToTopBtn" class="fixed bottom-8 right-8 px-6 py-3 rounded-full shadow-lg transition-all duration-300 ease-in-out z-50">
+        <span class="font-bold">Top</span> <i class="fas fa-arrow-up ml-2"></i>
+    </a>
+    
+    
+
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('.card-command');
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', () => {
+                    card.style.transform = 'translateY(-5px)';
+                    card.style.boxShadow = '0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.1)';
+                });
+                card.addEventListener('mouseleave', () => {
+                    card.style.transform = 'translateY(0)';
+                    card.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)';
+                });
+            });
+
+            // Scroll-to-Top Button Logic
+            const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 200) {
+                    scrollToTopBtn.style.opacity = '1';
+                    scrollToTopBtn.style.transform = 'translateY(0)';
+                } else {
+                    scrollToTopBtn.style.opacity = '0';
+                    scrollToTopBtn.style.transform = 'translateY(20px)';
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
